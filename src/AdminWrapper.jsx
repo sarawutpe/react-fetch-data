@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function AdminWrapper(props) {
   // การรับ props แบบ 1
@@ -6,6 +7,8 @@ export default function AdminWrapper(props) {
 
   // การรับ props แบบ 2
   // props.children
+
+  const navigate = useNavigate()
   return (
     <div className="flex flex-wrap place-items-center">
       <section className="relative mx-auto">
@@ -17,25 +20,17 @@ export default function AdminWrapper(props) {
             </a>
             {/* Nav Links */}
             <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-              <li>
-                <a className="hover:text-gray-200" href="#">
-                  Home
-                </a>
+              {/* Menu 1 */}
+              <li onClick={() => navigate('/')}>
+                <span className="hover:text-gray-200 cursor-pointer">Home</span>
               </li>
-              <li>
-                <a className="hover:text-gray-200" href="#">
-                  Catagory
-                </a>
+              {/* Menu 2 */}
+              <li onClick={() => navigate('/about')}>
+                <span className="hover:text-gray-200 cursor-pointer">About</span>
               </li>
-              <li>
-                <a className="hover:text-gray-200" href="#">
-                  Collections
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-gray-200" href="#">
-                  Contact Us
-                </a>
+              {/* Menu 3 */}
+              <li onClick={() => navigate('/contact')}>
+                <span className="hover:text-gray-200 cursor-pointer">Contact</span>
               </li>
             </ul>
             {/* Header Icons */}
