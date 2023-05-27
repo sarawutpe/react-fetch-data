@@ -34,4 +34,6 @@ export default {
 @tailwind components;
 @tailwind utilities;
 
+tailwind ok
+
 
