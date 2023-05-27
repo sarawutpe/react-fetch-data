@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
+import AdminWrapper from './AdminWrapper'
 
 export default function App() {
   return (
     <>
-      <div>App</div>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Button
-      </button>
+      <AdminWrapper>
+        <h3>Home</h3>
+      </AdminWrapper>
     </>
-  );
+  )
 }

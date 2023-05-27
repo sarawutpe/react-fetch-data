@@ -34,6 +34,9 @@ export default {
 @tailwind components;
 @tailwind utilities;
 
-tailwind ok
+Install React Router
+https://reactrouter.com/en/main
+$ yarn add react-router-dom
+
 
 
